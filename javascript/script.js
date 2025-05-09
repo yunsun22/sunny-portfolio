@@ -12,13 +12,14 @@ jQuery(document).ready(function(){
         $(this).find('.submenu2').stop().slideUp(500);
     });
 
-    $('.hero-slide a:gt(0)').hide();
-  setInterval(function(){
-      $('.hero-slide a:first-child')
-      .fadeOut(1000)
-      .next('a')
-      .fadeIn(1000)
-      .end()
-      .appendTo('.hero-slide');
-  },3000);
+    $('.slide a:gt(0)').hide();
+setInterval(function () {
+  $('.slide a:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('.slide');
+}, 3000);
+
 });

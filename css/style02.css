@@ -21,6 +21,11 @@ a{
 header{
     width: 100%;
     height: 100px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
 }
 
 .logo{
@@ -70,6 +75,7 @@ header{
     position: absolute;
     display: none;
     z-index: 1;
+    background-color: #fff;
 }
 
 .submenu2{
@@ -78,6 +84,7 @@ header{
     position: absolute;
     display: none;
     z-index: 1;
+    background-color: #fff;
 }
 
 .submenu1>li>a{
@@ -108,45 +115,88 @@ header{
     color: #ffa200;
 }
 
-.hero{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    text-align: center;
-    color: #ffffff;
-    margin-top: 50px;
-}
-
-.hero-slide{
+.slider-container {
     position: relative;
     width: 1000px;
-    height: 550px;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+  
+.slide a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+  
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.intro-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
-.hero-slide>a{
-    display:block; 
-    position:absolute;
-}
-
-.hero-content h1{
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    margin-top: 1.5rem;
-    color: #000;
+.intro-text h1 {
     font-family: "Playfair Display", serif;
+    color: #ffed86;
+    font-size: 2rem;
 }
 
-/* .hero-content img{
-    margin-top: 100px;
+.intro-text p{
+    font-size: 18px;
+    color: #ffed86;
+    margin-top: 20px;
+}
+
+/* .slider-container {
+    position: relative;
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+  
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+  
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.intro-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    z-index: 10;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+  
+.intro-text h1 {
+    font-size: 2.5rem;
+    font-family: 'Abril Fatface', serif;
+}
+  
+.intro-text p {
+    margin-top: 12px;
+    font-size: 1.1rem;
 } */
-
-.hero-content p{
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    margin-top: 1.5rem;
-    color: #000000;
-}
 
 #about-me {
     padding: 80px 20px;
